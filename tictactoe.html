@@ -23,32 +23,31 @@ and open the template in the editor.
     <body>
      <table>
         <tr>
-            <td id="1" onclick="play('1');">  </td>
-            <td id="2" onclick="play('2');">  </td>
-            <td id="3" onclick="play('3');">  </td>
+            <td id="1" onclick="play('1');"></td>
+            <td id="2" onclick="play('2');"></td>
+            <td id="3" onclick="play('3');"></td>
         </tr>
         <tr>
-            <td id="4" onclick="play('4');">  </td>
-            <td id="5" onclick="play('5');">  </td> 
-            <td id="6" onclick="play('6');">  </td>
+            <td id="4" onclick="play('4');"></td>
+            <td id="5" onclick="play('5');"></td> 
+            <td id="6" onclick="play('6');"></td>
         </tr>
         <tr>
-            <td id="7" onclick="play('7');">  </td>
-            <td id="8" onclick="play('8');">  </td> 
-            <td id="9" onclick="play('9');">  </td>
+            <td id="7" onclick="play('7');"></td>
+            <td id="8" onclick="play('8');"></td> 
+            <td id="9" onclick="play('9');"></td>
         </tr>
     </table>
         <script>
-           var turn = 0;;
+           var turn = 0;
             function play (num){
-              
-               var XO = document.getElementById(num);
-                    document.getElementById(num).innerHTML="X";
-               if( document.getElementById(num).innerHTML== " ") {
-                    if(turn % 2 === 0){
-                        document.getElementById(num).innerHTML="o";
+                var cell = document.getElementById(num);
+      
+               if( cell.textContent == "") {
+                    if(turn % 2 == 0){
+                        cell.textContent="o";
                     }else{
-                        document.getElementById(num).innerHTML="x";
+                        cell.textContent="x";
                     }
                }     
                 turn++;
@@ -64,8 +63,11 @@ and open the template in the editor.
                 check3cells("9","5","1");
             }
             function check3cells(cid1,cid2,cid3) {
-                var cl = document.getElementbyId(cid1)
-                
+                var c1 = document.getElementbyId(cid1);
+                var c2 = document.getElementbyId(cid2);
+                var c3 = document.getElementbyId(cid3);
+                    if (c1.textContent == c2.textContent) && (c1.textContent == c3.textContent) && (c1.textContent )
+         
             }
         </script>
     </body>
