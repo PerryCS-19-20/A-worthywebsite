@@ -5,12 +5,27 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html>
     <head>
-        <title>chalkboard</title>
-        
+        <title>ChalkBoard</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     
     <body>
-        <textarea rows="10" cols="10" id="inputText">list here</textarea>
-        <
+        <textarea rows="10" cols="50" id="inputText">list here</textarea>
+        <button onclick="ToDohtml();">Text here</button>
+        <ul id="ul"></ul>
+        
+        <script>
+            function ToDohtml() {
+                var i=0
+                while(i<100) {
+                    var list=document.getElementById("ul");
+                    var userinput= document.getElementById("inputText");
+                    var item= document.getElement("li");
+                    item.textContent = userinput.value;
+                    list.appendChild(item);
+                    i++
+                }
+            }
+        </script>
     </body>
 </html>
