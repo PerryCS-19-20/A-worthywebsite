@@ -74,12 +74,11 @@ and open the template in the editor.
                 check3cells("9","5","1");
             }
             function check3cells(cid1,cid2,cid3) {
-                var c1 = document.getElementbyId(cid1);
-                var c2 = document.getElementbyId(cid2);
-                var c3 = document.getElementbyId(cid3);
-                var span1= document.getElementbyId("span1");
-                    if ((c1.textContent == c2.textContent) && (c1.textContent == c3.textContent) && (c1.textContent !="")) {
-                        
+                var c1 = document.getElementById(cid1);
+                var c2 = document.getElementById(cid2);
+                var c3 = document.getElementById(cid3);
+                var span1= document.getElementById("span1");
+                    if ((c1.textContent == c2.textContent) && (c1.textContent == c3.textContent) && (c1.textContent !="")) { 
                         span1.textContent="WIN";
                     }
             
