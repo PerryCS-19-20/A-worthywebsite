@@ -6,6 +6,7 @@ and open the template in the editor.
 <html>
     <head>
         <title>TicTacToe</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
          <style>    
             table {
                 border-collapse: collapse;
@@ -37,20 +38,30 @@ and open the template in the editor.
             <td id="8" onclick="play('8');"></td> 
             <td id="9" onclick="play('9');"></td>
         </tr>
+ 
     </table>
+        <span id="span1"></span>
+    
         <script>
+            
            var turn = 0;
             function play (num){
                 var cell = document.getElementById(num);
-      
+               
                if( cell.textContent == "") {
                     if(turn % 2 == 0){
                         cell.textContent="o";
+                   
                     }else{
                         cell.textContent="x";
+                   
+                        
                     }
-               }     
+                    
+               }
+               
                 turn++;
+                checkWin();
             }
             function checkWin() {
                 check3cells("1","2","3");
@@ -66,8 +77,14 @@ and open the template in the editor.
                 var c1 = document.getElementbyId(cid1);
                 var c2 = document.getElementbyId(cid2);
                 var c3 = document.getElementbyId(cid3);
-                    if (c1.textContent == c2.textContent) && (c1.textContent == c3.textContent) && (c1.textContent )
-         
+                var span1= document.getElementbyId("span1");
+                    if ((c1.textContent == c2.textContent) && (c1.textContent == c3.textContent) && (c1.textContent !="")) {
+                        
+                        span1.textContent="WIN";
+                    }
+            
+            
+            
             }
         </script>
     </body>
