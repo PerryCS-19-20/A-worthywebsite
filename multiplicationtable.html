@@ -1,7 +1,4 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,40 +15,34 @@ and open the template in the editor.
         </style>
         
     </head>
-    <body onload="buildTimesTable()">
+    <body onload="buildTimesTable();">
 
             <script>
                 function buildTimesTable() {
                       var timesTable = document.createElement("table");
-                      timesTable.id = "timesTable"
-                      
+                      timesTable.id = "timesTable";
+                      var body = document.body;
+                      body.appendChild(timesTable);
                       for(var i=1; i < 11; i++) {
-                      var row = document.createElement("tr");
-                         for(var j=1; j < 11; j++) {
-                            var column = document.createElement("td");
-                            timesTable.appendChild(row);
-                            row.appendChild(column);
-                            //column.textContent= i * j;
+                          var row = document.createElement("tr");
+                         
+                            for(var j=1; j < 11; j++) {
+                                var column = document.createElement("td");
+                                timesTable.appendChild(row);
+                                row.appendChild(column);
+                                column.textContent= i * j;
+                           if (j % 3 == 0 && 1 && 2 && 3) {
+                               column.style.backgroundColor="yellow";
+                           }
+                           if (i % 3 == 0 && 1 && 2 && 3) {
+                               row.style.backgroundColor="yellow";
+                           }    
                          }
                       }
-                      var 
-                      
-                      var body = document.body;
-                      body.appendChild(timesTable)
-        
-        
-        /* document.write("<center><table border='1px'>");
-                    for(var a = 1; a < 11; a++) {
-                    document.write("<tr style='height:40px'>");
-                        for(var b = 1; b < 11; b++) {
-                        document.write("<td style='width:40px'><center><font size='4'>" 
-                            + a*b + "</center></font></td>");
-                        }
-                    document.write("</tr>");
-                    }
+                   
+                 }
+  
                 
-                document.write("</table></center>"); */
-                }
             </script>
     </body>
 </html>
