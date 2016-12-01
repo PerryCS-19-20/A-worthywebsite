@@ -22,7 +22,25 @@ and open the template in the editor.
 
             <script>
                 function buildTimesTable() {
-                    document.write("<center><table border='1px'>");
+                      var timesTable = document.createElement("table");
+                      timesTable.id = "timesTable"
+                      
+                      for(var i=1; i < 11; i++) {
+                      var row = document.createElement("tr");
+                         for(var j=1; j < 11; j++) {
+                            var column = document.createElement("td");
+                            timesTable.appendChild(row);
+                            row.appendChild(column);
+                            //column.textContent= i * j;
+                         }
+                      }
+                      var 
+                      
+                      var body = document.body;
+                      body.appendChild(timesTable)
+        
+        
+        /* document.write("<center><table border='1px'>");
                     for(var a = 1; a < 11; a++) {
                     document.write("<tr style='height:40px'>");
                         for(var b = 1; b < 11; b++) {
@@ -32,7 +50,7 @@ and open the template in the editor.
                     document.write("</tr>");
                     }
                 
-                document.write("</table></center>");
+                document.write("</table></center>"); */
                 }
             </script>
     </body>
