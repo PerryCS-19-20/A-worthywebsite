@@ -16,7 +16,15 @@ and open the template in the editor.
         
         <script>
             function ToDohtml() {
-                var i=0
+                var userInput = document.getElementById("inputText");
+                for (var i=0; i <100; i++){
+                    var listItem= document.createElement("li");
+                    listItem.textContent = userInput.value;
+                    board.apendChild(listItem);
+                }
+                
+                
+                /*var i=0
                 while(i<100) {
                     var list=document.getElementById("ul");
                     var userinput= document.getElementById("inputText");
@@ -24,8 +32,12 @@ and open the template in the editor.
                     item.textContent = userinput.value;
                     list.appendChild(item);
                     i++
-                }
+                   
+                } */
             }
         </script>
+        <ul id="board">
+            <li><li>
+        </ul>
     </body>
 </html>
