@@ -11,8 +11,10 @@ and open the template in the editor.
     <body>
         <textarea row="20" cols="60" id="inputText">Text Goes Here</textarea>
         <span id="span1"></span>
-        <button onclick="ToDohtml();">Go</button>
+        <button onclick="ToDo();">Go</button>
         <ul id="ul">
+            <li></li>
+        </ul>
         <script>
             function ToDo(){
                 var list = document.getElementById("ul");
@@ -21,6 +23,14 @@ and open the template in the editor.
                 item.textContent= userinput.value;
                 list.appendChild(item);
             
+                
+               /*             function ToDohtml() {
+                var userInput = document.getElementById("inputText");
+                for (var i=0; i <100; i++){
+                    var listItem= document.createElement("li");
+                    listItem.textContent = userInput.value;
+                    board.appendChild(listItem);
+                } */
             }
         </script>
         
