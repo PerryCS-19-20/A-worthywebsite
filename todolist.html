@@ -10,18 +10,18 @@ and open the template in the editor.
     </head>
     <body>
         <textarea row="20" cols="60" id="inputText">Text Goes Here</textarea>
-        <span id="span1"></span>
+        
         <button onclick="ToDo();">Go</button>
-        <ul id="ul">
-            <li></li>
+        <ul id="board">
+            <li>I will make list here</li>
         </ul>
         <script>
             function ToDo(){
-                var list = document.getElementById("ul");
+                var list = document.getElementById("board");
                 var userinput = document.getelementById("inputText");
-                var item = document.creatElement("li");
+                var item = document.createElement("li");
                 item.textContent= userinput.value;
-                ul.appendChild(item);
+                list.appendChild(item);
             
                 
                /*             function ToDohtml() {
