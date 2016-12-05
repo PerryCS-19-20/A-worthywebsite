@@ -1,6 +1,6 @@
 <script>
-    function buildMap() {
-        
+    function buildMap(id) {
+        <ul></ul>
     }
 
 </script>
