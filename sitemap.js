@@ -8,7 +8,7 @@
         var linkIndex = document.createElement("A");
         var listItem = document.createElement("li");
         linkIndex.setAttribute("href" , "index.html");
-        linkIndex.textContent= "home";
+        linkIndex.textContent= "Home";
         listItem.appendChild(linkIndex);
         bullet.appendChild(listItem);
         
@@ -44,7 +44,7 @@
         var nestedListItem = document.createElement("li");
         linkPopup.setAttribute("href", "popup.html");
         linkPopup.textContent = "Pop up";
-        nestedListItem.appendChild(linkJSevents);
+        nestedListItem.appendChild(linkPopup);
         nestedList.appendChild(nestedListItem);        
         
         var linkTodolist = document.createElement("A");
@@ -65,7 +65,7 @@
         var nestedListItem = document.createElement("li");
         linkTicTacToe.setAttribute("href", "todolist.html");
         linkTicTacToe.textContent = "Tic Tac Toe";
-        nestedListItem.appendChild(linkTodolist);
+        nestedListItem.appendChild(linkTicTacToe);
         nestedList.appendChild(nestedListItem);
         
         var linkMultiplication = document.createElement("A");
@@ -83,4 +83,4 @@
         nestedList.appendChild(nestedListItem);
 
     }
-`
+
