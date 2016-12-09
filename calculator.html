@@ -8,9 +8,19 @@ and open the template in the editor.
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title></title>
+        <title>Rectangle Calculator</title>
     </head>
     <body>
-        <div>TODO write content</div>
+        <script>
+            function calc() {
+                var h = parseFloat(document.getElementById("height").value);
+                var w = parseFloat(document.getElementById("width").value);
+                var l = parseFloat(document.getElementById("width").value);
+                
+                var area = Math.PI * w * l;
+                vol.value= (area * h).toFixed(2);
+                
+            }
+        </script>
     </body>
 </html>
