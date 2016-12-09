@@ -47,7 +47,7 @@ and open the template in the editor.
            var turn = 0;
             function play (num){
                 var cell = document.getElementById(num);
-               
+                
                if( cell.textContent == "") {
                     if(turn % 2 == 0){
                         cell.textContent="o";
@@ -59,9 +59,9 @@ and open the template in the editor.
                     }
                     
                }
-               
-                turn++;
                 checkWin();
+                turn++;
+                
             }
             function checkWin() {
                 check3cells("1","2","3");
@@ -80,9 +80,9 @@ and open the template in the editor.
                 var span1= document.getElementById("span1");
                     if ((c1.textContent == c2.textContent) && (c1.textContent == c3.textContent) && (c1.textContent !="")) { 
                         span1.textContent="WIN";
-                        c1.style.backgroundColor="red"
-                        c2.style.backgroundColor="red"
-                        c3.style.backgroundColor="red"
+                        c1.style.backgroundColor="red";
+                        c2.style.backgroundColor="red";
+                        c3.style.backgroundColor="red";
                     }
             
             
