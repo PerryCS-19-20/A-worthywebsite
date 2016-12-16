@@ -10,17 +10,37 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width">
         <title>Rectangle Calculator</title>
     </head>
-    <body>
+    <body onload="buildMap('menubar');">
+        <div id="menubar"></div>
+        <h1>Area of Rectangle</h1>
+        <h2>A = l * w <br>
+        V = l * w * h</h2>
+        
+        w : <input typr="number" id="width" placeholder="width"><br>
+        l : <input typr="number" id="length" placeholder="length">
+        h : <input typr="number" id="length" placeholder="length">
+        <button onclick="calc();">Calculator</button>
+        <hr>
+        area: <input type="output" id="area" placeholder="area" readonly>  
+        volume: <input type="output" id="vol" placeholder="vol" readonly>  
         <script>
             function calc() {
-                var h = parseFloat(document.getElementById("height").value);
-                var w = parseFloat(document.getElementById("width").value);
-                var l = parseFloat(document.getElementById("width").value);
-                
-                var area = Math.PI * w * l;
-                vol.value= (area * h).toFixed(2);
+               var h = parseFloat(document.getElementById("height").value);
+               var w = parseFloat(document.getElementById("width").value);
+               var l = parseFloat(document.getElementById("width").value);
+               
+               var area = w * l;
+               vol.value= (area * h).toFixed(2);
+               var volume =
                 
             }
+    
         </script>
+        <style>
+            input[type=number] {
+                width: 64;
+            }
+        </style>
+        
     </body>
 </html>
