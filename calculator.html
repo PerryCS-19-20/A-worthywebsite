@@ -18,7 +18,7 @@ and open the template in the editor.
         
         w : <input typr="number" id="width" placeholder="width"><br>
         l : <input typr="number" id="length" placeholder="length">
-        h : <input typr="number" id="length" placeholder="length">
+        h : <input typr="number" id="height" placeholder="height">
         <button onclick="calc();">Calculator</button>
         <hr>
         area: <input type="output" id="area" placeholder="area" readonly>  
@@ -27,12 +27,15 @@ and open the template in the editor.
             function calc() {
                var h = parseFloat(document.getElementById("height").value);
                var w = parseFloat(document.getElementById("width").value);
-               var l = parseFloat(document.getElementById("width").value);
+               var l = parseFloat(document.getElementById("length").value);
                
-               var area = w * l;
-               vol.value= (area * h).toFixed(2);
-               var volume =
-                
+                var vol = document.getElementById("vol")
+                var area = document.getElementById("area")
+                area.value= (w * l).toFixed(2);
+                vol.value= (area.value * h).toFixed(2);
+              
+               
+               
             }
     
         </script>
