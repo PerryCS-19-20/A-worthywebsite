@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>My Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">    
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="stylesheet" type="text/css" href="menubar.css">   
     <style>
             div {
                 /*width: 300px;*/
@@ -16,8 +17,11 @@
                 left: 865px;
             }
         </style>
+        
   </head>
-  <body>
+  <body onload="buildMap('menubar');">
+      <script src="sitemap.js"></script>
+      <div id="menubar"></div>
   
      <script>
          alert("Prepare your body");
@@ -39,6 +43,9 @@
    <a href="calculator.html"><h1>Calculator</h1></a>
    <a href="menubar.html"><h1>menubar</h1></a>
    
+    <script src="sitemap.js"></script>
+  
+ 
     
     </center>
   </body>

@@ -3,12 +3,14 @@ To change this template, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<!doctype html>
+
 <html>
 	<head>
 		<title>Breakout</title>
+                <link rel="stylesheet" type="text/css" href="menubar.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script type="text/javascript" src="https://static.codehs.com/gulp/cb01b4a22ffd3971572a8a1ab9f3b7c4cb17f383/chs-js-lib/chs.js"></script>
+		<script src="sitemap.js"></script>
+                <script type="text/javascript" src="https://static.codehs.com/gulp/cb01b4a22ffd3971572a8a1ab9f3b7c4cb17f383/chs-js-lib/chs.js"></script>
 		<script>
                       window.onload = function() {
 var NUM_ROWS = 8;
@@ -156,7 +158,7 @@ function walls(){
 			
 		</style>
 	</head>
-	<body>
+	<body onload="buildMap('menubar');">
 		<div id="canvasContainer" width="100%" style="width: 100%; height: 100%; overflow: hidden;">
 			<canvas width="400" height="500" class="codehs-editor-canvas"></canvas>
 		</div>
